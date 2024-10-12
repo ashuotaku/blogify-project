@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+    <section class="box">
+      <div class="container">
+        <% for(i in blogs){ %> <% if(i != 0){ %>
+        <hr />
+        <% } %>
+        <a href="/post/<%= i %>">
+          <div class="card">
+            <h2><%= blogs[i].title %></h2>
+            <p><%= blogs[i].content.slice(0, 200) %>...</p>
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </section>
+    <%- include("partials/footer.ejs") %>

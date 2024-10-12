@@ -1,0 +1,177 @@
+body{
+    background-color: #17153B;
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+h1{
+    font-size: 3rem;
+    margin-block: 1rem;
+}
+h2{
+    font-size: 2rem;
+    margin-block: 1rem;
+}
+header{
+    position: sticky;
+    top: 0.5rem;
+}
+.nav, footer{
+    background-color: #2E236C;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+footer{
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.nav li{
+    margin-inline: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.nav .title{
+    font-size: 2.25rem;
+    margin-block: 0;
+    margin-inline: 1rem;
+    font-weight: bold;
+}
+.nav a, .container a{
+    color: white;
+    text-decoration: none;
+}
+a{
+    color: rgb(224, 224, 224);
+}
+.container, .createbg > div{
+    margin-block: 3rem;
+    background-color: #433D8B;
+    max-width: 600px;
+    width: 70%;
+    min-width: 300px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+}
+.card h2{
+    margin-block: 1rem;
+}
+.card p, .blog p{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.createbg{
+    display: none;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    resize: vertical;
+    box-sizing: border-box;
+}
+input[type="submit"]{
+    width: auto;
+    margin: 0.5rem;
+    align-self: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.close{
+    align-self: flex-end;
+    display: inline;
+    position: fixed;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: none;
+}
+.btn{
+    position: static;
+    align-self: auto;
+    margin-block: 0.5rem;
+    font-size: 1.5rem;
+}
+.edit{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 2rem;
+}
+.delete{
+    color: white;
+    background-color: rgb(217 36 36);
+}
+.blogBox > div{
+    margin-inline: 1rem;
+}
+
+.blogBox{
+    align-items: flex-start;
+}
+@media only screen and (max-width: 550px) {
+    header{
+        position: static;
+    }
+    .blogBox{
+        flex-direction: column;
+        align-items: center;
+    }
+    .edit{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+  }
+@media only screen and (max-width: 420px){
+    .edit{
+        flex-direction: column;
+    }
+}

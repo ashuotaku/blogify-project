@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<div class="createbg" id="edit" onclick="removeEdit()">
+  <div onclick="stopPop(event)">
+    <form action="/edit/<%= locals.params.sn %>" method="post">
+      <div class="close" onclick="removeEdit()">x</div>
+      <label for="blogTitle"><h2>Edit Title: </h2></label>
+      <input
+        type="text"
+        name="title"
+        id="blogTitle"
+        placeholder="Type the title here"
+        value="<%= title %>"
+      />
+      <label for="blogContent"><h2>Edit Content:</h2></label>
+      <textarea
+        rows="11"
+        name="content"
+        id="blogContent"
+        placeholder="Enter the content of the website here"
+      ><%= content %></textarea>
+      <input type="submit" value="Save Changes" />
+    </form>
+  </div>
+</div>
+<section class="box blogBox">
+  <div class="container blog">
+    <h1><%= title %></h1>
+    <hr />
+    <p><%= content %></p>
+  </div>
+  <div class="container edit">
+    <button class="close btn" onclick="showEdit()">Edit</button>
+    <button class="close btn delete"><a href="/delete/<%= locals.params.sn %>">Delete</a></button>
+  </div>
+</section>
+<%- include("partials/footer.ejs") %>

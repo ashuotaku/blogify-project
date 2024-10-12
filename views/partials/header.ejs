@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a class="title" href="/">Blogify</a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="createPop()">New Post</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="createbg" id="create" onclick="removePop()">
+        <div onclick="stopPop(event)">
+          <form action="/publish" method="post">
+            <div class="close" onclick="removePop()">x</div>
+            <label for="blogTitle"><h2>Blog Title:</h2></label>
+            <input
+              type="text"
+              name="title"
+              id="blogTitle"
+              placeholder="Type the title here"
+            />
+            <label for="blogContent"><h2>Blog Content:</h2></label>
+            <textarea
+              rows="11"
+              name="content"
+              id="blogContent"
+              placeholder="Enter the content of the website here"
+            ></textarea>
+            <input type="submit" value="Publish" />
+          </form>
+        </div>
+      </div>
